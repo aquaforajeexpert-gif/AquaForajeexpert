@@ -1314,6 +1314,9 @@ gtag('config', 'AW-18074199670');
 
         try {
           await emailjs.sendForm("service_kocni68", "template_qj5z1hk", contactForm);
+          gtag('event', 'conversion', {
+  'send_to': 'AW-18074199670/ee94CNnM9JgcEPbMuapD'
+});
           formStatus.textContent = "✓ Mesaj trimis cu succes! Vă vom contacta în curând.";
           formStatus.classList.add("success");
           contactForm.reset();
