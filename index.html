@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+html = r'''<!DOCTYPE html>
 <html lang="ro">
 <head>
   <!-- Google tag (gtag.js) -->
@@ -29,8 +29,10 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>Foraje puțuri București & Ilfov | Apă rapid | AquaForaj Expert</title>
-   <meta name="description" content="Foraje puțuri în București și Ilfov. Execuție rapidă, preț corect. Contact WhatsApp sau telefon pentru ofertă imediată.">
+
+  <title>Foraje puțuri București & Ilfov | Apă rapid | AquaForaj Expert</title>
+  <meta name="description" content="Foraje puțuri în București și Ilfov. Execuție rapidă, preț corect. Contact WhatsApp sau telefon pentru ofertă imediată.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -44,7 +46,6 @@
       --accent: #f0a500;
       --white: #ffffff;
       --gray-50: #f8fafc;
-      --gray-100: #f1f5f9;
       --gray-200: #e2e8f0;
       --gray-400: #94a3b8;
       --gray-600: #475569;
@@ -54,7 +55,6 @@
       --radius-sm: 8px;
       --radius: 16px;
       --radius-lg: 24px;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
       --shadow: 0 4px 16px rgba(10,37,64,.10);
       --shadow-lg: 0 20px 48px rgba(10,37,64,.14);
       --max: 1120px;
@@ -73,7 +73,7 @@
 
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; display: block; }
-    button, input, textarea, select { font: inherit; }
+    button, input, textarea { font: inherit; }
 
     .container {
       width: min(100% - 40px, var(--max));
@@ -86,6 +86,7 @@
       font-size: 13.5px;
       padding: 10px 0;
     }
+
     .topbar-inner {
       display: flex;
       justify-content: space-between;
@@ -93,6 +94,7 @@
       gap: 12px;
       flex-wrap: wrap;
     }
+
     .topbar a {
       color: rgba(255,255,255,.9);
       font-weight: 600;
@@ -101,6 +103,7 @@
       align-items: center;
       gap: 6px;
     }
+
     .topbar a:hover { color: var(--accent); }
 
     .header {
@@ -112,6 +115,7 @@
       border-bottom: 1px solid var(--gray-200);
       box-shadow: 0 1px 0 rgba(0,0,0,.04);
     }
+
     .nav {
       display: flex;
       align-items: center;
@@ -119,11 +123,13 @@
       gap: 20px;
       min-height: 76px;
     }
+
     .logo {
       display: flex;
       align-items: center;
       gap: 12px;
     }
+
     .logo-icon {
       width: 46px;
       height: 46px;
@@ -132,16 +138,10 @@
       display: grid;
       place-items: center;
       flex-shrink: 0;
+      color: #fff;
+      font-weight: 800;
     }
-    .logo-icon svg {
-      width: 22px;
-      height: 22px;
-      fill: none;
-      stroke: #fff;
-      stroke-width: 2.2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
+
     .logo-name {
       font-family: 'Playfair Display', serif;
       font-size: 18px;
@@ -149,6 +149,7 @@
       color: var(--blue-deep);
       line-height: 1.1;
     }
+
     .logo-sub {
       font-size: 12px;
       color: var(--gray-400);
@@ -161,6 +162,7 @@
       align-items: center;
       gap: 28px;
     }
+
     .nav-links a {
       font-size: 14.5px;
       font-weight: 600;
@@ -168,6 +170,7 @@
       transition: color var(--transition);
       position: relative;
     }
+
     .nav-links a::after {
       content: '';
       position: absolute;
@@ -181,10 +184,12 @@
       transform-origin: left;
       transition: transform var(--transition);
     }
+
     .nav-links a:hover,
     .nav-links a.active {
       color: var(--blue-deep);
     }
+
     .nav-links a:hover::after,
     .nav-links a.active::after {
       transform: scaleX(1);
@@ -201,6 +206,7 @@
       border: none;
       cursor: pointer;
     }
+
     .btn-nav:hover { background: var(--blue-mid); transform: translateY(-1px); }
 
     .menu-toggle {
@@ -213,6 +219,7 @@
       flex-direction: column;
       gap: 5px;
     }
+
     .menu-toggle span {
       display: block;
       width: 20px;
@@ -228,6 +235,7 @@
       padding: 110px 0 90px;
       background: linear-gradient(165deg, var(--blue-deep) 0%, #0d3460 55%, #1a5276 100%);
     }
+
     .hero-video {
       position: absolute;
       inset: 0;
@@ -236,6 +244,7 @@
       object-fit: cover;
       z-index: 0;
     }
+
     .hero::before {
       content: '';
       position: absolute;
@@ -244,6 +253,7 @@
       z-index: 1;
       pointer-events: none;
     }
+
     .hero::after {
       content: '';
       position: absolute;
@@ -252,7 +262,9 @@
       right: 0;
       height: 80px;
       background: linear-gradient(to bottom, transparent, var(--white));
+      z-index: 1;
     }
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -262,6 +274,7 @@
       z-index: 2;
       max-width: 700px;
     }
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -277,6 +290,7 @@
       border-radius: 99px;
       margin-bottom: 20px;
     }
+
     .hero-badge span {
       width: 6px;
       height: 6px;
@@ -284,6 +298,7 @@
       border-radius: 50%;
       display: block;
     }
+
     .hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(36px, 4.5vw, 58px);
@@ -291,10 +306,7 @@
       color: #fff;
       margin-bottom: 18px;
     }
-    .hero h1 em {
-      font-style: normal;
-      color: var(--accent);
-    }
+
     .hero-sub {
       font-size: 17px;
       line-height: 1.75;
@@ -302,6 +314,7 @@
       margin-bottom: 36px;
       max-width: 560px;
     }
+
     .hero-actions {
       display: flex;
       gap: 12px;
@@ -322,24 +335,31 @@
       transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
       white-space: nowrap;
     }
+
     .btn:hover { transform: translateY(-2px); }
+
     .btn-primary {
       background: var(--accent);
       color: var(--blue-deep);
       box-shadow: 0 8px 24px rgba(240,165,0,.32);
     }
+
     .btn-primary:hover { background: #e09a00; box-shadow: 0 12px 32px rgba(240,165,0,.38); }
+
     .btn-outline {
       background: rgba(255,255,255,.1);
       color: #fff;
       border: 1.5px solid rgba(255,255,255,.25);
     }
+
     .btn-outline:hover { background: rgba(255,255,255,.18); }
+
     .btn-whatsapp {
       background: var(--green);
       color: #fff;
       box-shadow: 0 8px 20px rgba(37,211,102,.28);
     }
+
     .btn-whatsapp:hover { background: #20bc59; }
 
     .trust-bar {
@@ -347,6 +367,7 @@
       border-bottom: 1px solid var(--gray-200);
       padding: 18px 0;
     }
+
     .trust-items {
       display: flex;
       align-items: center;
@@ -354,6 +375,7 @@
       gap: 40px;
       flex-wrap: wrap;
     }
+
     .trust-item {
       display: flex;
       align-items: center;
@@ -362,7 +384,12 @@
       font-weight: 600;
       color: var(--gray-600);
     }
-    .trust-item svg { width: 18px; height: 18px; color: var(--blue-bright); flex-shrink: 0; }
+
+    .trust-item::before {
+      content: '✓';
+      color: var(--blue-bright);
+      font-weight: 800;
+    }
 
     .section { padding: 84px 0; }
     .section-alt { background: var(--gray-50); }
@@ -378,6 +405,7 @@
       color: var(--blue-bright);
       margin-bottom: 12px;
     }
+
     .section-label::before {
       content: '';
       display: block;
@@ -386,6 +414,7 @@
       background: var(--blue-bright);
       border-radius: 99px;
     }
+
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(28px, 3.5vw, 44px);
@@ -394,12 +423,14 @@
       color: var(--blue-deep);
       margin-bottom: 14px;
     }
+
     .section-desc {
       font-size: 16.5px;
       line-height: 1.8;
       color: var(--gray-600);
       max-width: 680px;
     }
+
     .section-head { margin-bottom: 48px; }
     .section-head.center { text-align: center; }
     .section-head.center .section-label { justify-content: center; }
@@ -410,6 +441,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
+
     .why-card {
       background: var(--white);
       border: 1px solid var(--gray-200);
@@ -417,11 +449,13 @@
       padding: 32px 28px;
       transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
     }
+
     .why-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-lg);
       border-color: rgba(30,136,229,.2);
     }
+
     .why-icon {
       width: 52px;
       height: 52px;
@@ -430,8 +464,10 @@
       display: grid;
       place-items: center;
       margin-bottom: 20px;
+      color: var(--blue-bright);
+      font-size: 24px;
     }
-    .why-icon svg { width: 24px; height: 24px; stroke: var(--blue-bright); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
     .why-card h3 {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
@@ -439,6 +475,7 @@
       margin-bottom: 10px;
       color: var(--blue-deep);
     }
+
     .why-card p {
       font-size: 15px;
       line-height: 1.75;
@@ -454,6 +491,7 @@
       border: 1px solid var(--gray-200);
       background: #000;
     }
+
     .video-box video {
       width: 100%;
       display: block;
@@ -467,6 +505,7 @@
       gap: 12px;
       margin-bottom: 48px;
     }
+
     .service-item {
       background: var(--white);
       border: 1px solid var(--gray-200);
@@ -477,11 +516,13 @@
       gap: 14px;
       transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
     }
+
     .service-item:hover {
       border-color: var(--gray-200);
       box-shadow: var(--shadow);
       transform: translateY(-1px);
     }
+
     .service-dot {
       width: 10px;
       height: 10px;
@@ -490,6 +531,7 @@
       flex-shrink: 0;
       margin-top: 5px;
     }
+
     .service-item span {
       font-size: 15px;
       font-weight: 500;
@@ -509,22 +551,14 @@
       position: relative;
       overflow: hidden;
     }
-    .cta-banner::after {
-      content: '';
-      position: absolute;
-      right: -60px;
-      top: -60px;
-      width: 280px;
-      height: 280px;
-      background: rgba(255,255,255,.06);
-      border-radius: 50%;
-    }
+
     .cta-text h3 {
       font-family: 'Playfair Display', serif;
       font-size: 28px;
       color: #fff;
       margin-bottom: 6px;
     }
+
     .cta-phone {
       font-size: 26px;
       font-weight: 700;
@@ -533,7 +567,7 @@
       align-items: center;
       gap: 8px;
     }
-    .cta-phone svg { width: 20px; height: 20px; stroke: var(--accent); fill: none; stroke-width: 2.5; }
+
     .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; position: relative; z-index: 1; }
 
     .counties-grid {
@@ -541,6 +575,7 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
     }
+
     .county-card {
       background: var(--white);
       border: 1px solid var(--gray-200);
@@ -551,11 +586,13 @@
       gap: 14px;
       transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
     }
+
     .county-card:hover {
       border-color: var(--blue-bright);
       box-shadow: var(--shadow);
       transform: translateY(-2px);
     }
+
     .county-pin {
       width: 40px;
       height: 40px;
@@ -564,8 +601,9 @@
       display: grid;
       place-items: center;
       flex-shrink: 0;
+      color: var(--blue-bright);
     }
-    .county-pin svg { width: 18px; height: 18px; stroke: var(--blue-bright); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
     .county-card h3 {
       font-size: 15.5px;
       font-weight: 700;
@@ -577,6 +615,7 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
     }
+
     .gallery-grid img {
       width: 100%;
       height: 260px;
@@ -587,6 +626,7 @@
       transition: transform var(--transition), box-shadow var(--transition);
       background: #f3f6fb;
     }
+
     .gallery-grid img:hover {
       transform: translateY(-3px);
       box-shadow: var(--shadow-lg);
@@ -598,24 +638,28 @@
       gap: 24px;
       align-items: start;
     }
+
     .contact-info {
       background: var(--blue-deep);
       border-radius: var(--radius-lg);
       padding: 36px 32px;
       color: rgba(255,255,255,.85);
     }
+
     .contact-info h3 {
       font-family: 'Playfair Display', serif;
       font-size: 24px;
       color: #fff;
       margin-bottom: 28px;
     }
+
     .contact-detail {
       display: flex;
       align-items: flex-start;
       gap: 14px;
       margin-bottom: 22px;
     }
+
     .contact-detail-icon {
       width: 42px;
       height: 42px;
@@ -626,15 +670,7 @@
       flex-shrink: 0;
       color: #fff;
     }
-    .contact-detail-icon svg {
-      width: 18px;
-      height: 18px;
-      stroke: #fff;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
+
     .contact-detail-label {
       font-size: 11.5px;
       text-transform: uppercase;
@@ -643,11 +679,13 @@
       font-weight: 600;
       margin-bottom: 3px;
     }
+
     .contact-detail-value {
       font-size: 15.5px;
       font-weight: 600;
       color: #fff;
     }
+
     .contact-detail-value a { color: #fff; transition: color var(--transition); }
     .contact-detail-value a:hover { color: var(--accent); }
     .contact-divider { height: 1px; background: rgba(255,255,255,.1); margin: 28px 0; }
@@ -661,13 +699,16 @@
       padding: 36px 32px;
       box-shadow: var(--shadow);
     }
+
     .contact-form h3 {
       font-family: 'Playfair Display', serif;
       font-size: 22px;
       color: var(--blue-deep);
       margin-bottom: 24px;
     }
+
     .form-row { margin-bottom: 14px; }
+
     .form-label {
       display: block;
       font-size: 13px;
@@ -675,6 +716,7 @@
       color: var(--gray-600);
       margin-bottom: 6px;
     }
+
     .contact-form input,
     .contact-form textarea {
       width: 100%;
@@ -687,12 +729,14 @@
       outline: none;
       transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
     }
+
     .contact-form input:focus,
     .contact-form textarea:focus {
       border-color: var(--blue-bright);
       background: #fff;
       box-shadow: 0 0 0 3px rgba(30,136,229,.12);
     }
+
     .contact-form textarea { min-height: 120px; resize: vertical; }
     .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
@@ -709,6 +753,7 @@
       transition: background var(--transition), transform var(--transition);
       margin-top: 4px;
     }
+
     .btn-submit:hover { background: var(--blue-mid); transform: translateY(-1px); }
     .btn-submit:disabled { opacity: .65; cursor: not-allowed; transform: none; }
     .form-status { margin-top: 12px; font-size: 14px; font-weight: 600; min-height: 18px; }
@@ -720,6 +765,7 @@
       color: rgba(255,255,255,.55);
       padding: 32px 0;
     }
+
     .footer-inner {
       display: flex;
       align-items: center;
@@ -727,6 +773,7 @@
       gap: 16px;
       flex-wrap: wrap;
     }
+
     .footer-logo {
       display: flex;
       align-items: center;
@@ -734,12 +781,7 @@
       color: rgba(255,255,255,.8);
       font-weight: 700;
     }
-    .footer-logo .logo-icon {
-      width: 36px;
-      height: 36px;
-      background: rgba(255,255,255,.12);
-    }
-    .footer-logo .logo-icon svg { width: 18px; height: 18px; }
+
     .footer-copy { font-size: 13px; }
 
     .floating {
@@ -751,6 +793,7 @@
       flex-direction: column;
       gap: 10px;
     }
+
     .float-btn {
       min-width: 54px;
       height: 54px;
@@ -766,26 +809,10 @@
       box-shadow: var(--shadow-lg);
       transition: transform var(--transition), box-shadow var(--transition);
     }
+
     .float-btn:hover { transform: translateY(-2px) scale(1.04); }
-    .float-btn svg {
-      width: 20px;
-      height: 20px;
-      stroke: #fff;
-      fill: none;
-      stroke-width: 2.3;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
-    }
     .float-call { background: var(--blue-bright); }
     .float-wa { background: var(--green); }
-
-    .wa-svg {
-      width: 18px;
-      height: 18px;
-      display: block;
-      flex-shrink: 0;
-    }
 
     @media (max-width: 1020px) {
       .why-grid,
@@ -850,19 +877,15 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
     .hero-text { animation: fadeUp .7s ease both; }
   </style>
 </head>
-<body>
 
+<body>
   <div class="topbar">
     <div class="container topbar-inner">
-      <a href="tel:+40734050860" onclick="return gtag_report_conversion('tel:+40734050860');">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.38 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.14 6.14l1.47-1.32a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-        </svg>
-        +40 734 050 860
-      </a>
+      <a href="tel:+40734050860" onclick="return gtag_report_conversion('tel:+40734050860');">☎ +40 734 050 860</a>
       <a href="#contact">Cerere ofertă gratuită →</a>
     </div>
   </div>
@@ -870,12 +893,7 @@
   <header class="header">
     <div class="container nav">
       <a href="#home" class="logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-            <path d="M12 6v6l4 2"/>
-          </svg>
-        </div>
+        <div class="logo-icon">A</div>
         <div>
           <div class="logo-name">AquaForaj Expert</div>
           <div class="logo-sub">Foraje Puțuri</div>
@@ -911,88 +929,60 @@
           <div class="hero-badge"><span></span>Foraje profesionale · Intervenții rapide</div>
           <h1>Foraje puțuri în București & Ilfov – Apă rapid și sigur</h1>
           <p class="hero-sub">Echipă specializată, materiale de calitate și respectarea termenelor. Soluții complete pentru apă potabilă, industrială și geotermală.</p>
+
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Cerere ofertă gratuită</a>
-            <a href="tel:+40734050860" class="btn btn-outline" onclick="return gtag_report_conversion('tel:+40734050860');">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.38 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.14 6.14l1.47-1.32a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-              Sună acum
-            </a>
-            <a href="https://wa.me/40734050860?text=Bun%C4%83%20ziua!%20Doresc%20detalii%20despre%20foraje." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-              <svg class="wa-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M20 11.5A8.5 8.5 0 0 0 5.8 5.2 8.5 8.5 0 0 0 4.5 17.8L4 21l3.3-.9A8.5 8.5 0 1 0 20 11.5Z" fill="#ffffff"/>
-                <path d="M9.2 9.2c.2-.5.4-.5.7-.5h.6c.2 0 .4.1.5.4l.6 1.5c.1.2 0 .4-.1.5l-.4.5c.5 1 1.3 1.8 2.3 2.3l.5-.4c.1-.1.4-.2.6-.1l1.4.6c.3.1.4.3.4.5v.6c0 .3 0 .5-.5.7-.4.2-.9.2-1.3.1-2.2-.7-4.5-2.9-5.1-5.1-.1-.4-.1-.9.1-1.3z" fill="#25D366"/>
-              </svg>
-              WhatsApp
-            </a>
+            <a href="tel:+40734050860" class="btn btn-outline" onclick="return gtag_report_conversion('tel:+40734050860');">Sună acum</a>
+            <a href="https://wa.me/40734050860?text=Bun%C4%83%20ziua!%20Doresc%20detalii%20despre%20foraje." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
           </div>
         </div>
       </div>
+    </section>
 
-     <section id="seo-local" class="section">
-  <div class="container">
-    <div class="section-head">
-      <span>Zone de lucru</span>
-      <h2>Foraje puțuri în București și Ilfov</h2>
-      <p>
-        Executăm foraje puțuri în București, Ilfov, Voluntari, Pantelimon, Otopeni, Bragadiru, Popești-Leordeni și zonele apropiate.
-      </p>
-    </div>
-  </div>
-</section>
+    <section id="seo-local" class="section">
+      <div class="container">
+        <div class="section-head center">
+          <div class="section-label">Zone de lucru</div>
+          <h2 class="section-title">Foraje puțuri în București și Ilfov</h2>
+          <p class="section-desc">
+            Executăm foraje puțuri în București, Ilfov, Voluntari, Pantelimon, Otopeni, Bragadiru, Popești-Leordeni și zonele apropiate.
+          </p>
+        </div>
+      </div>
+    </section>
 
-      -------------------------------------------------
+    <section id="seo-tipuri" class="section section-alt">
+      <div class="container">
+        <div class="section-head center">
+          <div class="section-label">Servicii foraje</div>
+          <h2 class="section-title">Tipuri de foraje puțuri</h2>
+          <p class="section-desc">
+            Realizăm foraje pentru apă potabilă, foraje de mare adâncime, foraje industriale și foraje geotermale.
+          </p>
+        </div>
+      </div>
+    </section>
 
-      <section>
-  <h2>Tipuri de foraje puțuri</h2>
-  <p>
-    Realizăm foraje pentru apă potabilă, foraje de mare adâncime, foraje industriale și foraje geotermale.
-  </p>
-</section>
-
-      <section>
-  <h2>Preț foraje puțuri</h2>
-  <p>
-    Prețul pentru foraje puțuri depinde de adâncime și tipul solului. Contactează-ne pentru ofertă personalizată.
-  </p>
-</section>
-      
+    <section id="seo-preturi" class="section">
+      <div class="container">
+        <div class="section-head center">
+          <div class="section-label">Prețuri</div>
+          <h2 class="section-title">Preț foraje puțuri</h2>
+          <p class="section-desc">
+            Prețul pentru foraje puțuri depinde de adâncime, diametru, tipul solului și locație. Contactează-ne pentru ofertă personalizată.
+          </p>
+        </div>
+      </div>
     </section>
 
     <div class="trust-bar">
       <div class="container">
         <div class="trust-items">
-          <div class="trust-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-            Specialiști autorizați
-          </div>
-          <div class="trust-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-            Materiale de calitate
-          </div>
-          <div class="trust-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-            Garanție lucrări
-          </div>
-          <div class="trust-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-            Ofertă gratuită
-          </div>
-          <div class="trust-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-            Răspuns rapid
-          </div>
+          <div class="trust-item">Specialiști autorizați</div>
+          <div class="trust-item">Materiale de calitate</div>
+          <div class="trust-item">Garanție lucrări</div>
+          <div class="trust-item">Ofertă gratuită</div>
+          <div class="trust-item">Răspuns rapid</div>
         </div>
       </div>
     </div>
@@ -1007,23 +997,17 @@
 
         <div class="why-grid">
           <div class="why-card">
-            <div class="why-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
+            <div class="why-icon">🛡</div>
             <h3>Seriozitate</h3>
             <p>Echipa noastră asigură toate operațiunile și materialele necesare execuției forajelor, cu respectarea strictă a standardelor tehnice.</p>
           </div>
           <div class="why-card">
-            <div class="why-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
+            <div class="why-icon">★</div>
             <h3>Calitate</h3>
             <p>Ne adaptăm la cerințele fiecărui client și utilizăm exclusiv materiale certificate, pentru rezultate durabile pe termen lung.</p>
           </div>
           <div class="why-card">
-            <div class="why-icon">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
+            <div class="why-icon">⏱</div>
             <h3>Punctualitate</h3>
             <p>Garantăm realizarea lucrărilor la termenele stabilite, în cel mai eficient și sigur mod posibil. Promisiunea ne definește.</p>
           </div>
@@ -1076,19 +1060,12 @@
           <div class="cta-text">
             <h3>Vă stăm la dispoziție pentru detalii</h3>
             <div class="cta-phone">
-              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.38 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.14 6.14l1.47-1.32a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <a href="tel:+40734050860" style="color:inherit" onclick="return gtag_report_conversion('tel:+40734050860');">+40 734 050 860</a>
             </div>
           </div>
           <div class="cta-actions">
             <a href="tel:+40734050860" class="btn btn-primary" onclick="return gtag_report_conversion('tel:+40734050860');">Sună acum</a>
-            <a href="https://wa.me/40734050860?text=Bun%C4%83%20ziua!%20Doresc%20o%20ofert%C4%83." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-              <svg class="wa-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M20 11.5A8.5 8.5 0 0 0 5.8 5.2 8.5 8.5 0 0 0 4.5 17.8L4 21l3.3-.9A8.5 8.5 0 1 0 20 11.5Z" fill="#ffffff"/>
-                <path d="M9.2 9.2c.2-.5.4-.5.7-.5h.6c.2 0 .4.1.5.4l.6 1.5c.1.2 0 .4-.1.5l-.4.5c.5 1 1.3 1.8 2.3 2.3l.5-.4c.1-.1.4-.2.6-.1l1.4.6c.3.1.4.3.4.5v.6c0 .3 0 .5-.5.7-.4.2-.9.2-1.3.1-2.2-.7-4.5-2.9-5.1-5.1-.1-.4-.1-.9.1-1.3z" fill="#25D366"/>
-              </svg>
-              WhatsApp
-            </a>
+            <a href="https://wa.me/40734050860?text=Bun%C4%83%20ziua!%20Doresc%20o%20ofert%C4%83." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
           </div>
         </div>
       </div>
@@ -1103,22 +1080,22 @@
         </div>
 
         <div class="counties-grid">
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>București - Ilfov</h3></div>
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Craiova</h3></div>
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Pitești</h3></div>
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Iași</h3></div>
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Buzău</h3></div>
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Slatina</h3></div>
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Bacău</h3></div>
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Vaslui</h3></div>
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Galați</h3></div>
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Giurgiu</h3></div>
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Călărași</h3></div>
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Brăila</h3></div>
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Brașov</h3></div>
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Teleorman</h3></div>
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Ialomița</h3></div>
-          <div class="county-card"><div class="county-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Dâmbovița</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>București - Ilfov</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>Craiova</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>Pitești</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>Iași</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>Buzău</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>Slatina</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>Bacău</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>Vaslui</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>Galați</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>Giurgiu</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>Călărași</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>Brăila</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>Brașov</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>Teleorman</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>Ialomița</h3></div>
+          <div class="county-card"><div class="county-pin">⌖</div><h3>Dâmbovița</h3></div>
         </div>
       </div>
     </section>
@@ -1132,15 +1109,15 @@
         </div>
 
         <div class="gallery-grid">
-          <img src="imagini/lucrare1.jpeg" alt="Lucrare foraj 1">
-          <img src="imagini/lucrare2.jpeg" alt="Lucrare foraj 2">
-          <img src="imagini/lucrare3.jpeg" alt="Lucrare foraj 3">
-          <img src="imagini/lucrare4.jpeg" alt="Lucrare foraj 4">
-          <img src="imagini/lucrare5.jpeg" alt="Lucrare foraj 5">
-          <img src="imagini/lucrare6.jpeg" alt="Lucrare foraj 6">
-          <img src="imagini/lucrare7.jpeg" alt="Lucrare foraj 7">
-          <img src="imagini/lucrare8.jpeg" alt="Lucrare foraj 8">
-          <img src="imagini/lucrare9.jpeg" alt="Lucrare foraj 9">
+          <img src="imagini/lucrare1.jpeg" alt="Lucrare foraj puț apă București Ilfov">
+          <img src="imagini/lucrare2.jpeg" alt="Lucrare foraj puț apă">
+          <img src="imagini/lucrare3.jpeg" alt="Echipament foraj puț">
+          <img src="imagini/lucrare4.jpeg" alt="Foraj puț apă adâncime">
+          <img src="imagini/lucrare5.jpeg" alt="Foraje puțuri apă">
+          <img src="imagini/lucrare6.jpeg" alt="Lucrare foraj profesional">
+          <img src="imagini/lucrare7.jpeg" alt="Foraj puț Ilfov">
+          <img src="imagini/lucrare8.jpeg" alt="Foraje București">
+          <img src="imagini/lucrare9.jpeg" alt="Lucrare AquaForaj Expert">
         </div>
       </div>
     </section>
@@ -1158,9 +1135,7 @@
             <h3>Date de contact</h3>
 
             <div class="contact-detail">
-              <div class="contact-detail-icon">
-                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.38 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.14 6.14l1.47-1.32a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
+              <div class="contact-detail-icon">☎</div>
               <div>
                 <div class="contact-detail-label">Telefon</div>
                 <div class="contact-detail-value"><a href="tel:+40734050860" onclick="return gtag_report_conversion('tel:+40734050860');">+40 734 050 860</a></div>
@@ -1168,9 +1143,7 @@
             </div>
 
             <div class="contact-detail">
-              <div class="contact-detail-icon">
-                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </div>
+              <div class="contact-detail-icon">✉</div>
               <div>
                 <div class="contact-detail-label">Email</div>
                 <div class="contact-detail-value"><a href="mailto:aquaforajeexpert@gmail.com">aquaforajeexpert@gmail.com</a></div>
@@ -1178,12 +1151,7 @@
             </div>
 
             <div class="contact-detail">
-              <div class="contact-detail-icon">
-                <svg class="wa-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M20 11.5A8.5 8.5 0 0 0 5.8 5.2 8.5 8.5 0 0 0 4.5 17.8L4 21l3.3-.9A8.5 8.5 0 1 0 20 11.5Z" fill="#ffffff"/>
-                  <path d="M9.2 9.2c.2-.5.4-.5.7-.5h.6c.2 0 .4.1.5.4l.6 1.5c.1.2 0 .4-.1.5l-.4.5c.5 1 1.3 1.8 2.3 2.3l.5-.4c.1-.1.4-.2.6-.1l1.4.6c.3.1.4.3.4.5v.6c0 .3 0 .5-.5.7-.4.2-.9.2-1.3.1-2.2-.7-4.5-2.9-5.1-5.1-.1-.4-.1-.9.1-1.3z" fill="#25D366"/>
-                </svg>
-              </div>
+              <div class="contact-detail-icon">☘</div>
               <div>
                 <div class="contact-detail-label">WhatsApp</div>
                 <div class="contact-detail-value"><a href="https://wa.me/40734050860" target="_blank" rel="noopener noreferrer">Deschide conversația</a></div>
@@ -1193,17 +1161,8 @@
             <div class="contact-divider"></div>
 
             <div class="contact-cta-btns">
-              <a href="tel:+40734050860" class="btn btn-outline" onclick="return gtag_report_conversion('tel:+40734050860');">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.38 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.14 6.14l1.47-1.32a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                Sună acum
-              </a>
-              <a href="https://wa.me/40734050860?text=Bun%C4%83%20ziua!%20Doresc%20o%20ofert%C4%83." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-                <svg class="wa-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M20 11.5A8.5 8.5 0 0 0 5.8 5.2 8.5 8.5 0 0 0 4.5 17.8L4 21l3.3-.9A8.5 8.5 0 1 0 20 11.5Z" fill="#ffffff"/>
-                  <path d="M9.2 9.2c.2-.5.4-.5.7-.5h.6c.2 0 .4.1.5.4l.6 1.5c.1.2 0 .4-.1.5l-.4.5c.5 1 1.3 1.8 2.3 2.3l.5-.4c.1-.1.4-.2.6-.1l1.4.6c.3.1.4.3.4.5v.6c0 .3 0 .5-.5.7-.4.2-.9.2-1.3.1-2.2-.7-4.5-2.9-5.1-5.1-.1-.4-.1-.9.1-1.3z" fill="#25D366"/>
-                </svg>
-                WhatsApp
-              </a>
+              <a href="tel:+40734050860" class="btn btn-outline" onclick="return gtag_report_conversion('tel:+40734050860');">Sună acum</a>
+              <a href="https://wa.me/40734050860?text=Bun%C4%83%20ziua!%20Doresc%20o%20ofert%C4%83." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
             </div>
           </div>
 
@@ -1238,12 +1197,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-            <path d="M12 6v6l4 2"/>
-          </svg>
-        </div>
+        <div class="logo-icon">A</div>
         AquaForaj Expert
       </div>
       <div class="footer-copy">© <span id="year"></span> AquaForaj Expert · Toate drepturile rezervate</div>
@@ -1251,18 +1205,8 @@
   </footer>
 
   <div class="floating">
-    <a class="float-btn float-call" href="tel:+40734050860" title="Sună" onclick="return gtag_report_conversion('tel:+40734050860');">
-      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.38 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.14 6.14l1.47-1.32a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      Sună
-    </a>
-
-    <a class="float-btn float-wa" href="https://wa.me/40734050860?text=Bun%C4%83%20ziua!%20Doresc%20mai%20multe%20detalii." target="_blank" rel="noopener noreferrer" title="WhatsApp">
-      <svg class="wa-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M20 11.5A8.5 8.5 0 0 0 5.8 5.2 8.5 8.5 0 0 0 4.5 17.8L4 21l3.3-.9A8.5 8.5 0 1 0 20 11.5Z" fill="#ffffff"/>
-        <path d="M9.2 9.2c.2-.5.4-.5.7-.5h.6c.2 0 .4.1.5.4l.6 1.5c.1.2 0 .4-.1.5l-.4.5c.5 1 1.3 1.8 2.3 2.3l.5-.4c.1-.1.4-.2.6-.1l1.4.6c.3.1.4.3.4.5v.6c0 .3 0 .5-.5.7-.4.2-.9.2-1.3.1-2.2-.7-4.5-2.9-5.1-5.1-.1-.4-.1-.9.1-1.3z" fill="#25D366"/>
-      </svg>
-      WhatsApp
-    </a>
+    <a class="float-btn float-call" href="tel:+40734050860" title="Sună" onclick="return gtag_report_conversion('tel:+40734050860');">☎ Sună</a>
+    <a class="float-btn float-wa" href="https://wa.me/40734050860?text=Bun%C4%83%20ziua!%20Doresc%20mai%20multe%20detalii." target="_blank" rel="noopener noreferrer" title="WhatsApp">WhatsApp</a>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -1326,3 +1270,10 @@
   </script>
 </body>
 </html>
+'''
+
+path = "/mnt/data/index-final-aquaforaj.html"
+with open(path, "w", encoding="utf-8") as f:
+    f.write(html)
+
+path
